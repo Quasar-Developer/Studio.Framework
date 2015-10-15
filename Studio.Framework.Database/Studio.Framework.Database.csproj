@@ -30,7 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.0.1\lib\net45\MongoDB.Bson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.0.1\lib\net45\MongoDB.Driver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.0.1.27, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.0.1\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,11 +53,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MongoDB\MongoCollection.cs" />
+    <Compile Include="MongoDB\MongoConnection.cs" />
+    <Compile Include="MongoDB\MongoManager.cs" />
     <Compile Include="MSSql\DapperManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MongoDB\" />
+    <None Include="packages.config" />
+    <None Include="packages\MongoDB.Bson.2.0.1\License.rtf" />
+    <None Include="packages\MongoDB.Bson.2.0.1\MongoDB.Bson.2.0.1.nupkg" />
+    <None Include="packages\MongoDB.Driver.2.0.1\License.rtf" />
+    <None Include="packages\MongoDB.Driver.2.0.1\MongoDB.Driver.2.0.1.nupkg" />
+    <None Include="packages\MongoDB.Driver.Core.2.0.1\License.rtf" />
+    <None Include="packages\MongoDB.Driver.Core.2.0.1\MongoDB.Driver.Core.2.0.1.nupkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\MongoDB.Bson.2.0.1\lib\net45\MongoDB.Bson.dll" />
+    <Content Include="packages\MongoDB.Bson.2.0.1\lib\net45\MongoDB.Bson.XML" />
+    <Content Include="packages\MongoDB.Driver.2.0.1\lib\net45\MongoDB.Driver.dll" />
+    <Content Include="packages\MongoDB.Driver.2.0.1\lib\net45\MongoDB.Driver.XML" />
+    <Content Include="packages\MongoDB.Driver.Core.2.0.1\lib\net45\MongoDB.Driver.Core.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
